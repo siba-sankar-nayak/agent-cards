@@ -1,0 +1,22 @@
+{
+  "name": "Advertising & Marketing Compliance Checker",
+  "description": "Reviews marketing copy for compliance. Input: JSON with content, channel, jurisdictions, industry, product_context, evidence. Output: overall_risk, flags, required_disclosures, approved_copy, questions_for_marketer.",
+  "url": "http://127.0.0.1:9000/",
+  "version": "0.1.0",
+  "protocol_version": "0.3.0",
+  "preferred_transport": "JSONRPC",
+  "default_input_modes": ["text"],
+  "default_output_modes": ["text"],
+  "capabilities": {
+    "streaming": true,
+    "push_notifications": false
+  },
+  "skills": [
+    {
+      "id": "compliance_check",
+      "name": "compliance_check",
+      "description": "Run a compliance check. Send a JSON body: content, channel, jurisdictions, industry (optional), product_context (optional), evidence (optional). Returns overall_risk, summary, flags, required_disclosures, approved_copy, questions_for_marketer.",
+      "tags": ["compliance", "advertising", "marketing", "legal"]
+    }
+  ]
+}
